@@ -10,10 +10,15 @@
         <div class = "listContainer">
             <h2>To Do List <img src = "icon.png"></h2>
             <div class ="taskbar">
-            <input type="text" id = "input-box" placeholder="enter your task"></input>
-            <button class = "add">Add</button>
+                <input type="text" id = "input-box" placeholder="enter your task"></input>
+                <button class = "add" onclick= addTask()>Add</button>
+            </div>
+            <div class = listDiv>
+                <ul id = "list-container">
+                </ul>
             </div>
         </div>
     </div>
+<script src="script.js"></script>
 </body>
 </html>

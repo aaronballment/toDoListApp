@@ -29,11 +29,12 @@
 }
 .taskbar{
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
 }
-input{
-    width:70%;
+.taskbar input{
+    width:100%;
     padding: 20px;
     border-radius: 30px;
     border: 0px;
@@ -42,6 +43,10 @@ input{
 }
 button{
     width: 25%;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
     padding: 20px;
     border-radius: 50px;
     background-color: orangered;
@@ -53,4 +58,50 @@ button{
 }
 .add:active{
     background-color: lightgrey;
+}
+ul li{
+    list-style: none;
+    padding: 15px 8px 12px 50px;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content:'';
+    position: absolute;
+    height:28px;
+    width:28px;
+    border-radius: 50%;
+    background-image: url("unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top:12px;
+    left:8px;
+}
+ul li.checked{
+    text-decoration: line-through;
+    color: #5555;
+}
+ul li.checked::before{
+    background-image: url("checked.png");
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height:40p;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
+
+}
+.listDiv{
+    padding-top:20px
 }
